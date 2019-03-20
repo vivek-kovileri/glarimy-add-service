@@ -13,7 +13,7 @@ public class EmployeeController {
 
 	@RequestMapping(value = "/employee", method = RequestMethod.POST, consumes = "application/json")
 	public Employee addEmployee(@RequestBody Employee employee) {
-		logger.debug("adding " + employee);
+		logger.debug("adding employee : " + employee);
 		return employee;
 	}
 

@@ -5,4 +5,4 @@ RUN mvn -f /usr/src/app/pom.xml clean package
 FROM gcr.io/distroless/java
 COPY --from=build /usr/src/app/target/glarimy-add-service-1.0.0.jar /usr/app/glarimy-add-service-1.0.0.jar
 EXPOSE 8082
-ENTRYPOINT ["java","-jar","glarimy-add-service-1.0.0.jar"]
+ENTRYPOINT ["java","-jar","/usr/app/glarimy-add-service-1.0.0.jar"]
